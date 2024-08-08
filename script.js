@@ -50,6 +50,7 @@ function Check() {
     if (ch.length > 1) {
         ch = ch[0]
     }
+    ch=ch.toLowerCase()
     if (ch == "") {
         document.getElementById("result").innerText = "Please enter a character"
     }
@@ -57,7 +58,7 @@ function Check() {
     console.log(i)
     if (i != -1) {
         let tempDiv = "div" + i + 1
-        document.getElementById(tempDiv).innerHTML = ch
+        document.getElementById(tempDiv).innerHTML = ch.toUpperCase()
         c = c.slice(0, i) + "1" + c.slice(i + 1);
         str[i] = ch
         // document.getElementById("result").innerText = str
