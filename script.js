@@ -33,6 +33,15 @@ function Level(){
     start()
 }
 
+function Prev(){
+    level--
+    if(level==0){
+        level=1
+    }
+    document.getElementById("level-head").innerHTML="Level "+level
+    start()
+}
+
 function start() {
     let choice=[]
     choice=choices[level-1]
