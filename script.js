@@ -29,6 +29,7 @@ function Level(){
     if(level==4){
         level=3
     }
+    document.getElementById("level-head").innerHTML="Level "+level
     start()
 }
 
