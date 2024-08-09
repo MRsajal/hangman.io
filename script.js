@@ -9,6 +9,8 @@ let pDiv = document.getElementById("words-box")
 const choice1 = [["mango", "fruit"], ["tiger", "animal"], ["carrot", "vegetable"], ["rose", "flower"]]
 const choice2=[["peach","fruit"],["zebra","animal"],["tomato",'vegetable'],["sunflower","flower"]]
 const choice3=[["Berry","fruit"],["axolotl","animal"],["cabage","vegetable"],["orchid","flower"]]
+let audio=document.getElementById("audio")
+
 
 const choices=[choice1,choice2,choice3]
 
@@ -87,4 +89,13 @@ function Check() {
             str.pop()
         }
     }
+}
+
+
+
+function Mute(){
+    audio.pause()
+}
+function Play(){
+    audio.play()
 }
