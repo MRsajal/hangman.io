@@ -3,8 +3,15 @@ let c = ""
 let s = ""
 let l = 0
 let aval = 0
+let level=1
 var divCreated = false
 let pDiv = document.getElementById("words-box")
+const choice1 = [["mango", "fruit"], ["tiger", "animal"], ["carrot", "vegetable"], ["rose", "flower"]]
+const choice2=[["peach","fruit"],["zebra","animal"],["tomato",'vegetable'],["sunflower","flower"]]
+const choice3=[["Berry","fruit"],["axolotl","animal"],["cabage","vegetable"],["orchid","flower"]]
+
+const choices=[choice1,choice2,choice3]
+
 
 function divCreate(l){
     for (let i = 0; i < l; i++) {
@@ -15,13 +22,22 @@ function divCreate(l){
     }
 }
 
+function Level(){
+    level++
+    if(level==4){
+        level=3
+    }
+    start()
+}
 
 function start() {
+    let choice=[]
+    choice=choices[level-1]
+    console.log(choice)
     document.getElementById("result1").style.display='none'
     aval = 0
     document.getElementById("result1").innerText = ""
     document.getElementById("result").innerText = ""
-    const choice = [["mango", "fruit"], ["tiger", "animal"], ["carrot", "vegetable"], ["rose", "flower"]]
     let x = Math.floor(Math.random() * 4)
     c = choice[x][0]
     s = choice[x][1]
@@ -61,12 +77,8 @@ function Check() {
         document.getElementById(tempDiv).innerHTML = ch.toUpperCase()
         c = c.slice(0, i) + "1" + c.slice(i + 1);
         str[i] = ch
-        // document.getElementById("result").innerText = str
         aval++;
     }
-    // else {
-    //     document.getElementById("result").innerText = str
-    // }
     if (aval == l) {
         document.getElementById("result1").style.display='block'
         document.getElementById("result1").innerText = "Corret!!"

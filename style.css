@@ -70,3 +70,9 @@ body {
     border-radius: 8px;
     display: none;
 }
+#next{
+    width: 100px;
+    height: 30px;
+    color: white;
+    background: linear-gradient(to bottom, rgb(0, 153, 255), rgb(0, 81, 255));
+}
